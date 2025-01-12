@@ -97,7 +97,7 @@
         "svgUrl": "https://s.w.org/images/core/emoji/15.0.3/svg/",
         "svgExt": ".svg",
         "source": {
-            "concatemoji": "https://themes.pixelwars.org/interioz/demo-01/wp-includes/js/wp-emoji-release.min.js?ver=6.6.2"
+            "concatemoji": "wp-includes/js/wp-emoji-release.min.js?ver=6.6.2"
         }
     };
     /*! This file is auto-generated */
@@ -522,104 +522,94 @@
     padding: 5px 0;
     position: relative;
     overflow: hidden;
-  }
+    }
 
-  /* Base Logo Styles */
-  .site-logo {
+    /* Base Logo Styles */
+    .site-logo {
     display: block;
     max-width: 100%;
     height: auto;
-    width: 180px;
-    max-height: 80px;
+    width: 180px; /* Increased base width */
+    max-height: 80px; /* Increased max-height */
     transition: all 0.3s ease;
     object-fit: contain;
-  }
+    }
 
-  /* Hide logo when menu is opened */
-  .is-menu-toggled-on .site-logo {
-    display: none;
-  }
-
-  /* Desktop (1025px and above) */
-  @media (min-width: 1025px) {
+    /* Desktop (1025px and above) */
+    @media (min-width: 1025px) {
     .site-logo-container {
       padding: 10px 0;
     }
     
     .site-logo {
-      width: 200px;
-      max-height: 70px;
+      width: 200px; /* Increased width */
+      max-height: 70px; /* Increased max-height */
     }
-  }
+    }
 
-  /* Tablets (768px - 1024px) */
-  @media (max-width: 1024px) {
+    /* Tablets (768px - 1024px) */
+    @media (max-width: 1024px) {
     .site-logo-container {
       padding: 8px 0;
     }
     
     .site-logo {
-      width: 160px;
+      width: 160px; /* Increased width */
       max-height: 60px;
     }
-  }
+    }
 
-  /* Mobile Devices (481px - 767px) */
-  @media (max-width: 767px) {
+    /* Mobile Devices (481px - 767px) */
+    @media (max-width: 767px) {
     .site-logo-container {
       padding: 6px 10px;
     }
     
     .site-logo {
-      width: 140px;
+      width: 140px; /* Increased width */
       max-height: 50px;
     }
-  }
+    }
 
-  /* Extra Small Devices (up to 480px) */
-  @media (max-width: 480px) {
+    /* Extra Small Devices (up to 480px) */
+    @media (max-width: 480px) {
     .site-logo-container {
       padding: 5px 8px;
     }
     
     .site-logo {
-      width: 120px;
+      width: 120px; /* Increased width */
       max-height: 45px;
     }
-  }
+    }
 
-  /* Fix for header alignment */
-  .site-header .site-branding {
+    /* Fix for header alignment */
+    .site-header .site-branding {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     text-align: center;
-  }
+    }
 
-  /* Hide entire branding when menu is opened */
-  .is-menu-toggled-on .site-branding {
-    display: none;
-  }
-
-  /* Ensure logo maintains quality */
-  .site-logo {
+    /* Ensure logo maintains quality */
+    .site-logo {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     image-rendering: -webkit-optimize-contrast;
-  }
+    }
 
-  /* Additional fixes for header compatibility */
-  .site-header {
+    /* Additional fixes for header compatibility */
+    .site-header {
     position: relative;
     overflow: visible;
-  }
+    }
 
-  .header-wrap-inner {
+    .header-wrap-inner {
     display: flex;
     align-items: center;
-  }
+    }
     .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
     				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
     					background-image: none !important;
@@ -824,7 +814,7 @@
                     <div class="bdt-inner-content  bdt-mobile"> <span class="bdt-line"></span>
                       <div class="bdt-desc-wrap">
                         <div class="bdt-desc">
-                          <p><img decoding="async" class="alignnone wp-image-12876" src="wp-content/uploads/sites/2/2024/07/Modern-take-on-upscale-bali-inspired-small-condo-w-4-300x205.jpg" alt="" width="400" height="274" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/Modern-take-on-upscale-bali-inspired-small-condo-w-4-300x205.jpg 300w, 
+                          <p><img decoding="async" class="alignnone wp-image-12876" src="wp-content/uploads/sites/2/2024/07/Modern-take-on-upscale-bali-inspired-small-condo-w-4-300x205.jpg" alt="" width="400" height="274" srcset="wp-content/uploads/sites/2/2024/07/Modern-take-on-upscale-bali-inspired-small-condo-w-4-300x205.jpg 300w, 
 						  wp-content/uploads/sites/2/2024/07/1/6.png 1024w, 
 						  wp-content/uploads/sites/2/2024/07/1/6.png 768w, 
 						  wp-content/uploads/sites/2/2024/07/1/6.png 804w, 
@@ -1021,42 +1011,42 @@
                     <div class="qodef-shortcode qodef-m  qodef-qi-interactive-link-showcase qodef-layout--split  qodef-hover--underline">
                       <div class="qodef-m-items"> <a itemprop="url" class="qodef-m-item qodef-e" href="#" target="_self"> <span class="qodef-e-title"><span class="qodef-e-inner-title">Residential</span></span> <span class="qodef-e-text">Personalized home interiors</span> </a> <a itemprop="url" class="qodef-m-item qodef-e" href="#" target="_self"> <span class="qodef-e-title"><span class="qodef-e-inner-title">Planning</span></span> <span class="qodef-e-text">Optimized layouts</span> </a> <a itemprop="url" class="qodef-m-item qodef-e" href="#" target="_self"> <span class="qodef-e-title"><span class="qodef-e-inner-title">Renovation</span></span> <span class="qodef-e-text">Seamless space updates</span> </a> <a itemprop="url" class="qodef-m-item qodef-e" href="#" target="_self"> <span class="qodef-e-title"><span class="qodef-e-inner-title">Redesign</span></span> <span class="qodef-e-text">Innovative transformations</span> </a> </div>
                       <div class="qodef-m-images">
-                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg)"> <img loading="lazy" decoding="async" width="1920" height="1152" src="wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg" class="attachment-full size-full" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg 1920w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-300x180.jpg 300w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-1024x614.jpg 1024w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-768x461.jpg 768w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-917x550.jpg 917w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-1060x636.jpg 1060w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-1536x922.jpg 1536w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-550x330.jpg 550w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-833x500.jpg 833w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/very-high-detailed-1800x1080.jpg 1800w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
-                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg)"> <img loading="lazy" decoding="async" width="1920" height="1920" src="wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg" class="attachment-full size-full" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg 1920w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-300x300.jpg 300w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1024x1024.jpg 1024w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-150x150.jpg 150w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-768x768.jpg 768w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-550x550.jpg 550w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1060x1060.jpg 1060w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1536x1536.jpg 1536w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-500x500.jpg 500w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1080x1080.jpg 1080w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-650x650.jpg 650w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1300x1300.jpg 1300w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
-                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/2149721890.jpg)"> <img loading="lazy" decoding="async" width="1500" height="1001" src="wp-content/uploads/sites/2/2024/07/2149721890.jpg" class="attachment-full size-full" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890.jpg 1500w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-300x200.jpg 300w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-1024x683.jpg 1024w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-768x513.jpg 768w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-824x550.jpg 824w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-1060x707.jpg 1060w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-550x367.jpg 550w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2149721890-749x500.jpg 749w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
-                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/2148903485.jpg)"> <img loading="lazy" decoding="async" width="1000" height="815" src="wp-content/uploads/sites/2/2024/07/2148903485.jpg" class="attachment-full size-full" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485.jpg 1000w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485-300x245.jpg 300w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485-768x626.jpg 768w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485-675x550.jpg 675w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485-550x448.jpg 550w, 
-						https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/2148903485-613x500.jpg 613w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
+                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg)"> <img loading="lazy" decoding="async" width="1920" height="1152" src="wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg" class="attachment-full size-full" alt="" srcset="wp-content/uploads/sites/2/2024/07/very-high-detailed.jpg 1920w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-300x180.jpg 300w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-1024x614.jpg 1024w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-768x461.jpg 768w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-917x550.jpg 917w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-1060x636.jpg 1060w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-1536x922.jpg 1536w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-550x330.jpg 550w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-833x500.jpg 833w, 
+						wp-content/uploads/sites/2/2024/07/very-high-detailed-1800x1080.jpg 1800w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg)"> <img loading="lazy" decoding="async" width="1920" height="1920" src="wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg" class="attachment-full size-full" alt="" srcset="wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1.jpg 1920w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-300x300.jpg 300w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1024x1024.jpg 1024w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-150x150.jpg 150w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-768x768.jpg 768w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-550x550.jpg 550w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1060x1060.jpg 1060w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1536x1536.jpg 1536w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-500x500.jpg 500w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1080x1080.jpg 1080w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-650x650.jpg 650w, 
+						wp-content/uploads/sites/2/2024/07/modern-living-room-clean-lines-neutral-colors-natural-elements-design-concept-1-1-1300x1300.jpg 1300w" sizes="(max-width: 1920px) 100vw, 1920px" /></div>
+                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/2149721890.jpg)"> <img loading="lazy" decoding="async" width="1500" height="1001" src="wp-content/uploads/sites/2/2024/07/2149721890.jpg" class="attachment-full size-full" alt="" srcset="wp-content/uploads/sites/2/2024/07/2149721890.jpg 1500w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-300x200.jpg 300w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-1024x683.jpg 1024w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-768x513.jpg 768w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-824x550.jpg 824w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-1060x707.jpg 1060w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-550x367.jpg 550w, 
+						wp-content/uploads/sites/2/2024/07/2149721890-749x500.jpg 749w" sizes="(max-width: 1500px) 100vw, 1500px" /></div>
+                        <div class="qodef-e-image qodef-background" style="background-image: url(wp-content/uploads/sites/2/2024/07/2148903485.jpg)"> <img loading="lazy" decoding="async" width="1000" height="815" src="wp-content/uploads/sites/2/2024/07/2148903485.jpg" class="attachment-full size-full" alt="" srcset="wp-content/uploads/sites/2/2024/07/2148903485.jpg 1000w, 
+						wp-content/uploads/sites/2/2024/07/2148903485-300x245.jpg 300w, 
+						wp-content/uploads/sites/2/2024/07/2148903485-768x626.jpg 768w, 
+						wp-content/uploads/sites/2/2024/07/2148903485-675x550.jpg 675w, 
+						wp-content/uploads/sites/2/2024/07/2148903485-550x448.jpg 550w, 
+						wp-content/uploads/sites/2/2024/07/2148903485-613x500.jpg 613w" sizes="(max-width: 1000px) 100vw, 1000px" /></div>
                       </div>
                     </div>
                   </div>
@@ -1489,7 +1479,7 @@
                 <div class="elementor-element elementor-element-1266a77 elementor-invisible elementor-widget elementor-widget-qi_addons_for_elementor_banner" data-id="1266a77" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInLeft&quot;}" data-widget_type="qi_addons_for_elementor_banner.default">
                   <div class="elementor-widget-container">
                     <div class="qodef-shortcode qodef-m  qodef-qi-banner qodef-layout--standard qodef-vertical--bottom qodef-horizontal--center qodef-image--hover-zoom ">
-                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t1.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-01-2-650x650.jpg 650w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-01-2-150x150.jpg 150w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-01-2-550x550.jpg 550w, wp-content/uploads/sites/2/2024/07/t1.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
+                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t1.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="wp-content/uploads/sites/2/2024/07/t1.jpg 650w, wp-content/uploads/sites/2/2024/07/t1.jpg 150w, wp-content/uploads/sites/2/2024/07/t1.jpg 550w, wp-content/uploads/sites/2/2024/07/t1.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
                       <div class="qodef-m-content">
                         <div class="qodef-m-content-inner">
                           <h5 class="qodef-m-subtitle"> Junior Designer </h5>
@@ -1504,7 +1494,7 @@
                 <div class="elementor-element elementor-element-51a0450 elementor-invisible elementor-widget elementor-widget-qi_addons_for_elementor_banner" data-id="51a0450" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="qi_addons_for_elementor_banner.default">
                   <div class="elementor-widget-container">
                     <div class="qodef-shortcode qodef-m  qodef-qi-banner qodef-layout--standard qodef-vertical--bottom qodef-horizontal--center qodef-image--hover-zoom ">
-                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t-03-650x650.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="wp-content/uploads/sites/2/2024/03/7091.jpg 650w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-150x150.jpg 150w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-550x550.jpg 550w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-300x300.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
+                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t2.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="wp-content/uploads/sites/2/2024/07/t2.jpg 650w, wp-content/uploads/sites/2/2024/07/t2.jpg 150w, wp-content/uploads/sites/2/2024/07/t2.jpg 550w, wp-content/uploads/sites/2/2024/07/t2.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
                       <div class="qodef-m-content">
                         <div class="qodef-m-content-inner">
                           <h5 class="qodef-m-subtitle"> Lead Designer </h5>
@@ -1519,7 +1509,7 @@
                 <div class="elementor-element elementor-element-51a0450 elementor-invisible elementor-widget elementor-widget-qi_addons_for_elementor_banner" data-id="51a0450" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInUp&quot;}" data-widget_type="qi_addons_for_elementor_banner.default">
                   <div class="elementor-widget-container">
                     <div class="qodef-shortcode qodef-m  qodef-qi-banner qodef-layout--standard qodef-vertical--bottom qodef-horizontal--center qodef-image--hover-zoom ">
-                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t-03-650x650.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="wp-content/uploads/sites/2/2024/03/7091.jpg 650w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-150x150.jpg 150w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-550x550.jpg 550w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-03-300x300.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
+                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="650" height="650" src="wp-content/uploads/sites/2/2024/07/t3.jpg" class="attachment-qi_addons_for_elementor_image_size_square size-qi_addons_for_elementor_image_size_square" alt="" srcset="wp-content/uploads/sites/2/2024/07/t3.jpg 650w, wp-content/uploads/sites/2/2024/07/t3.jpg 150w, wp-content/uploads/sites/2/2024/07/t3.jpg 550w, wp-content/uploads/sites/2/2024/07/t3.jpg 300w" sizes="(max-width: 650px) 100vw, 650px" /></div>
                       <div class="qodef-m-content">
                         <div class="qodef-m-content-inner">
                           <h5 class="qodef-m-subtitle"> Lead Designer </h5>
@@ -1534,7 +1524,7 @@
                 <div class="elementor-element elementor-element-8634093 elementor-invisible elementor-widget elementor-widget-qi_addons_for_elementor_banner" data-id="8634093" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;fadeInRight&quot;}" data-widget_type="qi_addons_for_elementor_banner.default">
                   <div class="elementor-widget-container">
                     <div class="qodef-shortcode qodef-m  qodef-qi-banner qodef-layout--standard qodef-vertical--bottom qodef-horizontal--center qodef-image--hover-zoom ">
-                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="800" height="889" src="wp-content/uploads/sites/2/2024/07/t-02.jpg" class="attachment-qi_addons_for_elementor_image_size_huge-square size-qi_addons_for_elementor_image_size_huge-square" alt="" srcset="https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02.jpg 800w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02-270x300.jpg 270w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02-768x853.jpg 768w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02-495x550.jpg 495w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02-550x611.jpg 550w, https://themes.pixelwars.org/interioz/demo-01/wp-content/uploads/sites/2/2024/07/t-02-450x500.jpg 450w" sizes="(max-width: 800px) 100vw, 800px" /></div>
+                      <div class="qodef-m-image"> <img loading="lazy" decoding="async" width="800" height="889" src="wp-content/uploads/sites/2/2024/07/t4.jpg" class="attachment-qi_addons_for_elementor_image_size_huge-square size-qi_addons_for_elementor_image_size_huge-square" alt="" srcset="wp-content/uploads/sites/2/2024/07/t4.jpg 800w, wp-content/uploads/sites/2/2024/07/t4.jpg 270w, wp-content/uploads/sites/2/2024/07/t4.jpg 768w, wp-content/uploads/sites/2/2024/07/t4.jpg 495w, wp-content/uploads/sites/2/2024/07/t4.jpg 550w, wp-content/uploads/sites/2/2024/07/t4.jpg 450w" sizes="(max-width: 800px) 100vw, 800px" /></div>
                       <div class="qodef-m-content">
                         <div class="qodef-m-content-inner">
                           <h5 class="qodef-m-subtitle"> Senior Project Manager </h5>
