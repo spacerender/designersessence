@@ -513,36 +513,103 @@
   <meta name="generator" content="Elementor 3.25.10; features: e_font_icon_svg, additional_custom_breakpoints, e_optimized_control_loading, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-auto">
   <style>
   
-.site-logo {
-  max-width: 100%;   /* Prevents the logo from overflowing */
-  height: auto;      /* Maintains aspect ratio */
-  width: 100px;      /* Default logo size */
-  display: block;    
-  margin: 0 auto;    /* Centers the logo horizontally */
-}
+  /* Logo Container Styles */
+  .site-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+    overflow: hidden;
+    }
 
-/* Tablets and Medium Screens (768px - 1024px) */
-@media (max-width: 1024px) {
-  .site-logo {
-    width: 100px;    /* Slightly smaller logo for tablets */
-  }
-}
+    /* Base Logo Styles */
+    .site-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 180px; /* Increased base width */
+    max-height: 80px; /* Increased max-height */
+    transition: all 0.3s ease;
+    object-fit: contain;
+    }
 
-/* Mobile Devices (Up to 768px) */
-@media (max-width: 768px) {
-  .site-logo {
-    width: 80px;     /* Smaller logo for mobile screens */
-  }
-}
+    /* Desktop (1025px and above) */
+    @media (min-width: 1025px) {
+    .site-logo-container {
+      padding: 10px 0;
+    }
+    
+    .site-logo {
+      width: 200px; /* Increased width */
+      max-height: 70px; /* Increased max-height */
+    }
+    }
 
-/* Extra Small Devices (Up to 480px) */
-@media (max-width: 480px) {
-  .site-logo {
-    width: 60px;     /* Smallest size for very small screens */
-  }
-}
-  
-  
+    /* Tablets (768px - 1024px) */
+    @media (max-width: 1024px) {
+    .site-logo-container {
+      padding: 8px 0;
+    }
+    
+    .site-logo {
+      width: 160px; /* Increased width */
+      max-height: 60px;
+    }
+    }
+
+    /* Mobile Devices (481px - 767px) */
+    @media (max-width: 767px) {
+    .site-logo-container {
+      padding: 6px 10px;
+    }
+    
+    .site-logo {
+      width: 140px; /* Increased width */
+      max-height: 50px;
+    }
+    }
+
+    /* Extra Small Devices (up to 480px) */
+    @media (max-width: 480px) {
+    .site-logo-container {
+      padding: 5px 8px;
+    }
+    
+    .site-logo {
+      width: 120px; /* Increased width */
+      max-height: 45px;
+    }
+    }
+
+    /* Fix for header alignment */
+    .site-header .site-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+
+    /* Ensure logo maintains quality */
+    .site-logo {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Additional fixes for header compatibility */
+    .site-header {
+    position: relative;
+    overflow: visible;
+    }
+
+    .header-wrap-inner {
+    display: flex;
+    align-items: center;
+    }
     .e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
     				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
     					background-image: none !important;
