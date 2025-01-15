@@ -10,11 +10,11 @@ data-title-ratio="0.7" data-link-box-title-ratio="0.5" data-generic-button-style
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="profile" href="http://gmpg.org/xfn/11">
-    <title>Portfolio &#8211; Interioz.</title>
+    <title>Portfolio &#8211; The Designers Essence.</title>
     <meta name='robots' content='max-image-preview:large' />
     <link rel='dns-prefetch' href='http://fonts.googleapis.com/' />
-    <link rel="alternate" type="application/rss+xml" title="Interioz. &raquo; Feed" href="../feed/index.html" />
-    <link rel="alternate" type="application/rss+xml" title="Interioz. &raquo; Comments Feed" href="../comments/feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="The Designers Essence. &raquo; Feed" href="../feed/index.html" />
+    <link rel="alternate" type="application/rss+xml" title="The Designers Essence. &raquo; Comments Feed" href="../comments/feed/index.html" />
     <script type="text/javascript">
         /* <![CDATA[ */
         	window._wpemojiSettings = {
@@ -1050,7 +1050,103 @@ data-title-ratio="0.7" data-link-box-title-ratio="0.5" data-generic-button-style
         		--wpforms-button-size-margin-top: 10px;
         		--wpforms-container-shadow-size-box-shadow: none;
         	}
-			
+  /* Logo Container Styles */
+  .site-logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0;
+    position: relative;
+    overflow: hidden;
+    }
+
+    /* Base Logo Styles */
+    .site-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 180px; /* Increased base width */
+    max-height: 80px; /* Increased max-height */
+    transition: all 0.3s ease;
+    object-fit: contain;
+    }
+
+    /* Desktop (1025px and above) */
+    @media (min-width: 1025px) {
+    .site-logo-container {
+      padding: 10px 0;
+    }
+    
+    .site-logo {
+      width: 200px; /* Increased width */
+      max-height: 70px; /* Increased max-height */
+    }
+    }
+
+    /* Tablets (768px - 1024px) */
+    @media (max-width: 1024px) {
+    .site-logo-container {
+      padding: 8px 0;
+    }
+    
+    .site-logo {
+      width: 160px; /* Increased width */
+      max-height: 60px;
+    }
+    }
+
+    /* Mobile Devices (481px - 767px) */
+    @media (max-width: 767px) {
+    .site-logo-container {
+      padding: 6px 10px;
+    }
+    
+    .site-logo {
+      width: 140px; /* Increased width */
+      max-height: 50px;
+    }
+    }
+
+    /* Extra Small Devices (up to 480px) */
+    @media (max-width: 480px) {
+    .site-logo-container {
+      padding: 5px 8px;
+    }
+    
+    .site-logo {
+      width: 120px; /* Increased width */
+      max-height: 45px;
+    }
+    }
+
+    /* Fix for header alignment */
+    .site-header .site-branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    }
+
+    /* Ensure logo maintains quality */
+    .site-logo {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Additional fixes for header compatibility */
+    .site-header {
+    position: relative;
+    overflow: visible;
+    }
+
+    .header-wrap-inner {
+    display: flex;
+    align-items: center;
+    }			
 
     </style>
 </head>
@@ -1065,7 +1161,7 @@ data-title-ratio="0.7" data-link-box-title-ratio="0.5" data-generic-button-style
                             <div class="site-branding-left"> </div>
                             <!-- .site-branding-left -->
                             <div class="site-branding-center">
-								<img src="wp-content/uploads/sites/2/2024/07/1/DE.png" alt="Designer’s Essence Logo" class="site-logo"/>
+								<img src="../wp-content/uploads/sites/2/2024/07/1/DE.png" alt="Designer’s Essence Logo" class="site-logo"/>
 							 </div> <!-- .site-branding-center -->
                             <div class="site-branding-right"> </div>
                             <!-- .site-branding-right -->
@@ -1270,7 +1366,7 @@ data-title-ratio="0.7" data-link-box-title-ratio="0.5" data-generic-button-style
         <!-- #main .site-main -->
         <footer id="colophon" class="site-footer" role="contentinfo">
             <div class="site-info">
-                <p>© INTERIOZ</p>
+                <p>©THE DESIGNERS ESSENCE</p>
             </div>
             <!-- .site-info -->
         </footer>
