@@ -1,26 +1,68 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello World with Google Login</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Firebase SDKs (Modular) -->
-    <script type="module"> // Import Firebase functions import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js"; import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
-        // ✅ Your Firebase config (fixed storageBucket) const firebaseConfig = { apiKey: "AIzaSyC0QGaDKrKzb7SGcQ3K3Sw2oI8-qIIRkHs", authDomain: "archviz-models.firebaseapp.com", projectId: "archviz-models", storageBucket: "archviz-models.appspot.com",
-        messagingSenderId: "222151849439", appId: "1:222151849439:web:3db08b239edc40e889806a", measurementId: "G-LL0PFNZFGW" }; // Init Firebase const app = initializeApp(firebaseConfig); const auth = getAuth(app); const provider = new GoogleAuthProvider();
-        // DOM elements const loginBtn = document.getElementById("loginBtn"); const logoutBtn = document.getElementById("logoutBtn"); const userInfo = document.getElementById("user-info"); // Login loginBtn.addEventListener("click", () => { signInWithPopup(auth,
-        provider).catch(err => alert(err.message)); }); // Logout logoutBtn.addEventListener("click", () => { signOut(auth); }); // Auth state listener onAuthStateChanged(auth, (user) => { if (user) { userInfo.innerHTML = ✅ Logged in as <b>${user.displayName}</b>        (${user.email}); loginBtn.classList.add("hidden"); logoutBtn.classList.remove("hidden"); } else { userInfo.innerHTML = "❌ Not logged in."; loginBtn.classList.remove("hidden"); logoutBtn.classList.add("hidden"); } }); </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello World with Google Login</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Firebase SDKs (Modular) -->
+  <script type="module">
+    // Import Firebase functions
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.5/firebase-app.js";
+    import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged } 
+      from "https://www.gstatic.com/firebasejs/10.12.5/firebase-auth.js";
+
+    // ✅ Your Firebase config (fixed storageBucket)
+    const firebaseConfig = {
+      apiKey: "AIzaSyC0QGaDKrKzb7SGcQ3K3Sw2oI8-qIIRkHs",
+      authDomain: "archviz-models.firebaseapp.com",
+      projectId: "archviz-models",
+      storageBucket: "archviz-models.appspot.com",
+      messagingSenderId: "222151849439",
+      appId: "1:222151849439:web:3db08b239edc40e889806a",
+      measurementId: "G-LL0PFNZFGW"
+    };
+
+    // Init Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+
+    // DOM elements
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    const userInfo = document.getElementById("user-info");
+
+    // Login
+    loginBtn.addEventListener("click", () => {
+      signInWithPopup(auth, provider).catch(err => alert(err.message));
+    });
+
+    // Logout
+    logoutBtn.addEventListener("click", () => {
+      signOut(auth);
+    });
+
+    // Auth state listener
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        userInfo.innerHTML = `✅ Logged in as <b>${user.displayName}</b> (${user.email})`;
+        loginBtn.classList.add("hidden");
+        logoutBtn.classList.remove("hidden");
+      } else {
+        userInfo.innerHTML = "❌ Not logged in.";
+        loginBtn.classList.remove("hidden");
+        logoutBtn.classList.add("hidden");
+      }
+    });
+  </script>
 </head>
-
 <body class="bg-gray-900 text-white flex items-center justify-center h-screen">
-    <div class="text-center">
-        <h1 class="text-3xl mb-6">🌸 Hello World 🌸</h1>
-        <div id="user-info" class="mb-4">Not logged in.</div>
-        <button id="loginBtn" class="px-4 py-2 bg-blue-600 rounded">Login with Google</button>
-        <button id="logoutBtn" class="px-4 py-2 bg-red-600 rounded hidden">Logout</button>
-    </div>
+  <div class="text-center">
+    <h1 class="text-3xl mb-6">🌸 Hello World 🌸</h1>
+    <div id="user-info" class="mb-4">Not logged in.</div>
+    <button id="loginBtn" class="px-4 py-2 bg-blue-600 rounded">Login with Google</button>
+    <button id="logoutBtn" class="px-4 py-2 bg-red-600 rounded hidden">Logout</button>
+  </div>
 </body>
-
 </html>
