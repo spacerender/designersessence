@@ -32,6 +32,14 @@
     const loginBtn = document.getElementById("loginBtn");
     const logoutBtn = document.getElementById("logoutBtn");
     const userInfo = document.getElementById("user-info");
+    const paymentSection = document.getElementById("payment-section");
+    const paymentBtn = document.getElementById("paymentBtn");
+    const accessSection = document.getElementById("access-section");
+    const driveLink = document.getElementById("driveLink");
+
+    // Payment status storage
+    const PAYMENT_KEY = 'razorpay_payment_verified';
+    const DRIVE_LINK = 'https://drive.google.com/drive/folders/1X3dNJNtGM7x18KRAIyP0SA0J4dEqWfxz?usp=sharing';
 
     // Login
     loginBtn.addEventListener("click", () => {
@@ -43,26 +51,124 @@
       signOut(auth);
     });
 
+    // Check payment status function
+    function checkPaymentStatus(user) {
+      // Check if user has verified payment stored locally
+      const paymentVerified = localStorage.getItem(`${PAYMENT_KEY}_${user.uid}`);
+      
+      if (paymentVerified === 'true') {
+        // User has paid, show access section
+        showAccessSection(user);
+      } else {
+        // User hasn't paid, show payment section
+        showPaymentSection(user);
+      }
+    }
+
+    function showPaymentSection(user) {
+      userInfo.innerHTML = `✅ Logged in as <b>${user.displayName}</b>`;
+      loginBtn.classList.add("hidden");
+      logoutBtn.classList.remove("hidden");
+      paymentSection.classList.remove("hidden");
+      accessSection.classList.add("hidden");
+    }
+
+    function showAccessSection(user) {
+      userInfo.innerHTML = `✅ Logged in as <b>${user.displayName}</b> - Payment Verified ✅`;
+      loginBtn.classList.add("hidden");
+      logoutBtn.classList.remove("hidden");
+      paymentSection.classList.add("hidden");
+      accessSection.classList.remove("hidden");
+    }
+
+    // Handle payment button click
+    if (paymentBtn) {
+      paymentBtn.addEventListener("click", () => {
+        // Store user info for after payment
+        if (auth.currentUser) {
+          localStorage.setItem('pending_user_id', auth.currentUser.uid);
+        }
+        // Redirect to Razorpay payment
+        window.open('https://rzp.io/rzp/LyyWIzu', '_blank');
+        // Redirect to payment verification page
+        setTimeout(() => {
+          window.location.href = 'payment-verify.html';
+        }, 1000);
+      });
+    }
+
+    // Handle drive link click
+    if (driveLink) {
+      driveLink.addEventListener("click", () => {
+        window.open(DRIVE_LINK, '_blank');
+      });
+    }
+
     // Auth state listener
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        userInfo.innerHTML = `✅ Logged in as <b>${user.displayName}</b> (${user.email})`;
-        loginBtn.classList.add("hidden");
-        logoutBtn.classList.remove("hidden");
+        checkPaymentStatus(user);
       } else {
         userInfo.innerHTML = "❌ Not logged in.";
         loginBtn.classList.remove("hidden");
         logoutBtn.classList.add("hidden");
+        paymentSection.classList.add("hidden");
+        accessSection.classList.add("hidden");
+        
+        // Clear any stored user data
+        localStorage.removeItem('pending_user_id');
+      }
+    });
+
+    // Check if returning from payment
+    window.addEventListener('load', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('payment_verified') === 'true') {
+        const userId = urlParams.get('user_id');
+        if (userId && auth.currentUser && auth.currentUser.uid === userId) {
+          localStorage.setItem(`${PAYMENT_KEY}_${userId}`, 'true');
+          checkPaymentStatus(auth.currentUser);
+        }
       }
     });
   </script>
 </head>
-<body class="bg-gray-900 text-white flex items-center justify-center h-screen">
-  <div class="text-center">
-    <h1 class="text-3xl mb-6">🌸 Hello World 🌸</h1>
+<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen py-8">
+  <div class="text-center max-w-md mx-auto px-4">
+    <h1 class="text-3xl mb-6">🌸 Designer's Essence 🌸</h1>
     <div id="user-info" class="mb-4">Not logged in.</div>
-    <button id="loginBtn" class="px-4 py-2 bg-blue-600 rounded">Login with Google</button>
-    <button id="logoutBtn" class="px-4 py-2 bg-red-600 rounded hidden">Logout</button>
+    
+    <!-- Login Section -->
+    <div id="login-section">
+      <button id="loginBtn" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors">Login with Google</button>
+    </div>
+
+    <!-- Payment Section -->
+    <div id="payment-section" class="hidden">
+      <div class="bg-yellow-800 bg-opacity-50 p-6 rounded-lg mb-4">
+        <h2 class="text-xl mb-3">💳 Purchase Required</h2>
+        <p class="mb-4 text-gray-300">To access the premium content, please complete your purchase.</p>
+        <button id="paymentBtn" class="px-6 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors mb-3 block w-full">
+          Pay Now - Complete Purchase
+        </button>
+        <p class="text-sm text-gray-400">You'll be redirected to Razorpay for secure payment</p>
+      </div>
+    </div>
+
+    <!-- Access Section -->
+    <div id="access-section" class="hidden">
+      <div class="bg-green-800 bg-opacity-50 p-6 rounded-lg mb-4">
+        <h2 class="text-xl mb-3">🎉 Payment Verified!</h2>
+        <p class="mb-4 text-gray-300">Your payment has been verified. Access your premium content below:</p>
+        <button id="driveLink" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors mb-3 block w-full">
+          📂 Access Premium Content
+        </button>
+        <p class="text-sm text-gray-400">Google Drive folder with your purchased materials</p>
+      </div>
+    </div>
+
+    <!-- Logout Button -->
+    <button id="logoutBtn" class="px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg hidden mt-4 transition-colors">Logout</button>
   </div>
 </body>
 </html>
